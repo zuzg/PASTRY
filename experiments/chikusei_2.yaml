@@ -1,0 +1,20 @@
+data:
+  path: "data/benchmark_full/HyperspecVNIR_Chikusei_20140729.mat"
+  name: chikusei
+  batch_size: 16
+
+net:
+  name: Nesy
+  params:
+    scale_factor: 2
+    num_symbols: 12
+  ckpt_path: "output/models/chikusei12.pth"
+
+trainer:
+  epochs: 200
+  lr: 0.0005
+  device: cuda
+
+wandb_mode: online
+tags:
+  - "chikusei"

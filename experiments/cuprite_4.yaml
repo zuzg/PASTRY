@@ -1,0 +1,21 @@
+data:
+  path: "data/cuprite.mat"
+  name: cuprite
+  batch_size: 32
+
+net:
+  name: Nesy
+  params:
+    scale_factor: 4
+    num_symbols: 15
+  ckpt_path: "output/models/cuprite15.pth"
+
+trainer:
+  epochs: 100
+  lr: 0.0005
+  device: cuda
+
+wandb_mode: online
+tags:
+ - "bic"
+ - "L1"

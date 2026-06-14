@@ -1,0 +1,21 @@
+data:
+  path: "data/2018IEEE_Contest/Phase2/FullHSIDataset/20170218_UH_CASI_S4_NAD83.hdr"
+  name: houston
+  batch_size: 32
+
+net:
+  name: Nesy
+  params:
+    scale_factor: 4
+    num_symbols: 20
+  ckpt_path: "output/models/houston_full.pth"
+
+trainer:
+  epochs: 100
+  lr: 0.001
+  device: cuda
+
+wandb_mode: online
+tags:
+ - "bic"
+ - "L1"

@@ -1,0 +1,21 @@
+data:
+  path: "data/benchmark_full/Pavia.mat"
+  name: paviac
+  batch_size: 32
+
+net:
+  name: Nesy
+  params:
+    scale_factor: 2
+    num_symbols: 10
+  ckpt_path: "output/models/paviac10.pth"
+
+trainer:
+  epochs: 100
+  lr: 0.0005
+  device: cuda
+
+wandb_mode: online
+tags:
+ - "bic"
+ - "L1"

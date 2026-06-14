@@ -1,0 +1,27 @@
+data:
+  path: "data/benchmark_full/PaviaU.mat"
+  name: pavia
+  batch_size: 13
+
+net:
+  name: Nesy
+  params:
+    scale_factor: 4
+    num_symbols: 12
+  ckpt_path: "output/models/paviau_100_12333_aug_loss.pth"
+# TOP: "output/models/paviau_100_12333_aug_loss.pth", "output/models/paviau_100_12333_aug.pth"
+
+trainer:
+  epochs: 200
+  lr: 0.001
+  device: cuda
+
+wandb_mode: disabled # "online", "offline" or "disabled"
+tags:
+  - "U"
+  - "convT"
+  - "hdl_loss"
+  - "sched"
+  - "leaky01"
+  - "4res"
+  - "s6"
